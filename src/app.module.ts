@@ -3,9 +3,12 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { connectionOptions } from '../ormConfig';
+import { AuthModule } from './auth/auth.module';
+
 @Module({
   imports: [
-    TypeOrmModule.forRoot(connectionOptions)
+    TypeOrmModule.forRoot(connectionOptions),
+    AuthModule
   ],
   controllers: [AppController],
   providers: [AppService],

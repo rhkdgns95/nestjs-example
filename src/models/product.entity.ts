@@ -5,10 +5,12 @@ import {
   ManyToOne,
   CreateDateColumn,
   UpdateDateColumn,
+  Entity,
 } from 'typeorm';
 import { User } from './user.entity';
 import { Order } from './order.entity';
 
+@Entity('product')
 export class Product extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;

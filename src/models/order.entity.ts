@@ -1,8 +1,11 @@
-import { PrimaryGeneratedColumn, BaseEntity, CreateDateColumn, UpdateDateColumn, ManyToOne, Column, OneToMany, RelationCount } from "typeorm";
+import { PrimaryGeneratedColumn, BaseEntity, CreateDateColumn, UpdateDateColumn, ManyToOne, Column, OneToMany } from "typeorm";
 import { User } from "./user.entity";
 import { Product } from "./product.entity";
+import { Entity } from "typeorm";
 
+@Entity('order')
 export class Order extends BaseEntity {
+  
   @PrimaryGeneratedColumn()
   id: number;
 

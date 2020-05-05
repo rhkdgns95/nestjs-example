@@ -7,6 +7,6 @@ export const connectionOptions: TypeOrmModuleOptions = {
   username: 'postgres',
   password: 'qwe123123',
   database: 'nestjs',
-  entities: ['src/models/*.entity.*'],
+  entities: ['dist/**/*.entity.*'],
   synchronize: true,
 };
